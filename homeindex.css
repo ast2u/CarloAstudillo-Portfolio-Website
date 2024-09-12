@@ -1,0 +1,116 @@
+
+.font-bebasnav{
+font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100;
+}
+.font-internav{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-variant: normal;
+}
+.navbrand-color-green{
+    color:#7ed956
+}
+.navbrand-logopic{
+    margin:-20px -13px -10px -20px;
+}
+.mpHeadline{
+    padding-top: 75px;
+}
+.topbg-home{
+    background-image: url(images/jack-b-ombUn7ergE4-unsplash.jpg);
+    background-size: cover;
+    
+}
+
+
+.pictureport{
+    width: 500px;
+    height: auto;
+    display: inline;
+    position: relative;
+   
+    
+    
+}
+.circle-for-pic{
+    position: relative;
+    display: inline-block;
+}
+.circle-for-pic:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%; /* Align the half-circle to the center */
+    width: 140% ; /* Adjust width to control the size of the circle */
+    height: 125%; /* Adjust height to control the size of the circle */
+    border-radius: 40%; /* Create a circle */
+    background: url(images/bgimage.jpg) no-repeat center center;
+      background-size: cover;
+      overflow: hidden;
+  filter: blur(2px) brightness(50%);
+    clip-path: inset(0 0 20% 0); /* Only display the top half of the circle */
+    transform: translateX(-50%); /* Center the half-circle horizontally */
+    border: 10px solid rgba(0, 0, 0, .6); /* Transparent border */
+    box-sizing: border-box;
+  }
+
+.headlinehText{
+font-family: Inter;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  color: white;
+  font-size:55px;
+  font-style: normal;
+
+}
+.headlinebText{
+    padding: 5px 15px 0px 0px;
+    color: white;
+    font-family: Inter;
+    
+}
+.navbar-nav .open ul.dropdown-menu{ 
+    border-radius:0px; 
+    border:solid 1px red; 
+    border-width:1px 0;
+}
+.nav-item hr{
+    display: none;
+}
+.navbar{
+    background-color:transparent;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030; /* Ensure it is above other content */
+  }
+  
+  .sticky + .content {
+    padding-top: 56px; /* Adjust for the height of the navbar */
+  }
+
+
+
+@media (max-width: 991px) {
+    .mpHeadline{
+        padding-top:60px
+    }
+    .paddingHeadline{
+        padding-top: 10px;
+    }
+    .nav-item hr {
+      display: block;
+      border: 1px solid #ffffff; /* Color of the <hr>, adjust as needed */
+      margin: 0.5rem 0; /* Adjust spacing around <hr> */
+    }
+    .navbar {
+        position: relative !important;
+        background-color: greenyellow;
+      }
+  }
