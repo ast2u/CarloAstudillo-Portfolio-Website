@@ -15,7 +15,9 @@ font-family: "Bebas Neue", sans-serif;
     color:#7ed956
 }
 .navbrand-logopic{
-    margin:-20px -13px -10px -20px;
+   position: relative;
+   display:inline-block;
+   width: 60px;
 }
 .mpHeadline{
     padding-top: 75px;
@@ -24,6 +26,28 @@ font-family: "Bebas Neue", sans-serif;
     background-image: url(images/jack-b-ombUn7ergE4-unsplash.jpg);
     background-size: cover;
     
+}
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    transition: 0.6s;
+    position: 40px 100px;
+    z-index:100000 ;
+}
+header.sticky{
+    padding: 0px 80px;
+    background: #fff
+}
+header.sticky ul li a{
+    color: black !important;
+}
+header.sticky a img{
+width: 50px ;
+}
+header.sticky a{
+    font-size: 5;
 }
 
 
@@ -106,11 +130,14 @@ font-family: Inter;
     }
     .nav-item hr {
       display: block;
-      border: 1px solid #ffffff; /* Color of the <hr>, adjust as needed */
+      border: 1px solid black; /* Color of the <hr>, adjust as needed */
       margin: 0.5rem 0; /* Adjust spacing around <hr> */
     }
     .navbar {
         position: relative !important;
-        background-color: greenyellow;
+        background-color: white;
       }
+      header.sticky ul li a{
+        color: black !important;
+    }
   }
