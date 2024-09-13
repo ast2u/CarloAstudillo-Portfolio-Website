@@ -25,7 +25,6 @@ font-family: "Bebas Neue", sans-serif;
 }
 .nav-link-edit{
     font-size: 16px;
-    
     color: white;
     text-decoration: none;
     font-weight: 700;
@@ -62,7 +61,7 @@ header.sticky ul li a{
     color: black ;
 }
 header.sticky a img{
-width: 50px ;
+width: 60px;
 }
 header.sticky a{
     font-size: 5;
