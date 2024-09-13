@@ -27,7 +27,7 @@ window.addEventListener("scroll",function(){
 
 
 
-
+// for testing
 
 const navbar = document.querySelector('.navbar');
 

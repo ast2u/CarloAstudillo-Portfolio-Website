@@ -15,17 +15,17 @@ font-family: "Bebas Neue", sans-serif;
     color:#7ed956
 }
 .navbrand-logopic{
-   position: relative;
-   display:inline-block;
-   width: 50px;
+   width: 60px;
+   transition: .3s;
 
 }
 .navbrand-logo-color{
-    color:white
+    color:white;
+    font-size: 25px;
+    transition: .3s;
 }
 .nav-link-edit{
     font-size: 16px;
-    
     color: white;
     text-decoration: none;
     font-weight: 700;
@@ -62,10 +62,14 @@ header.sticky ul li a{
     color: black ;
 }
 header.sticky a img{
-width: 50px ;
+   
+width: 40px;
+height: 40px;
+
 }
-header.sticky a{
-    font-size: 5;
+header.sticky .navbrand-logo-color{
+    font-size: 20px;
+    color: black;
 }
 
 
@@ -74,9 +78,11 @@ header.sticky a{
     height: auto;
     display: inline;
     position: relative;
-   
-    
-    
+    transition: .2s;
+    padding-top: 5px;
+}
+.pictureport:hover{
+    transform: translateY(-5%) scale(1.1);
 }
 .circle-for-pic{
     position: relative;
@@ -93,12 +99,18 @@ header.sticky a{
     background: url(images/bgimage.jpg) no-repeat center center;
       background-size: cover;
       overflow: hidden;
-  filter: blur(2px) brightness(50%);
+  filter: blur(1px) brightness(50%);
     clip-path: inset(0 0 20% 0); /* Only display the top half of the circle */
     transform: translateX(-50%); /* Center the half-circle horizontally */
     border: 10px solid rgba(0, 0, 0, .6); /* Transparent border */
     box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
+.circle-for-pic:hover:before{
+    opacity: 1; /* Show on hover */
+    
+}
 
 .headlinehText{
 font-family: Inter;
@@ -166,4 +178,10 @@ font-family: Inter;
       header.sticky ul li a{
         color: black ;
     }
+    section#Portfolio h1{
+        text-align: center;
+        justify-content: center;
+        /* Need Checking */
+    }
+
   }
