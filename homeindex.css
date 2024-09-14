@@ -167,30 +167,42 @@ font-family: Inter;
   }
 
 
-
-@media (max-width: 991px) {
+/* Mobile View */
+@media (max-width: 992px) {
     .mpHeadline{
         padding-top:120px
     }
     .nav-item hr {
       display: block;
-      border: 1px solid black; /* Color of the <hr>, adjust as needed */
-      margin: 0.5rem 0; /* Adjust spacing around <hr> */
+      border: 1px solid white;
+      margin: 0.5rem 0; 
     }
-    .nav-link-edit{
-        color: black;
-    }
-    .navbar {
-        position: relative !important;
-        background-color: white;
+    header.sticky .nav-item hr {
+        display: block;
+        border: 1px solid black;
+        margin: 0.5rem 0;
       }
+    .nav-link-edit{
+        color: white;
+        padding-bottom: 5px;
+    }
       header.sticky ul li a{
         color: black ;
     }
-    section#Portfolio h1{
-        text-align: center;
-        justify-content: center;
-        /* Need Checking */
+    header{
+        background:url(images/jack-b-ombUn7ergE4-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: .5s;
     }
-
+    .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(126, 217, 86, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+      }
+      
+    .custom-toggler.navbar-toggler{
+        border-color: #7ed956;
+    }
+    .mobile-center{
+       /* need checking and testing */
+    }
   }
