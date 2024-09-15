@@ -165,14 +165,19 @@ font-family: Inter;
     justify-content: center;
   }
 
+
   .about-section{
-    background: url(images/annie-spratt-0aF_vV0xgQk-unsplash.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(255,255,255,0.25)), url(images/annie-spratt-0aF_vV0xgQk-unsplash.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  .about-head-container{
+    padding-top: 80px;
   }
   .h1About{
     position: absolute;
     z-index: 0;
     font-size: 6vw;
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.15);
     font-family: Inter;
     font-weight: 900;
 
