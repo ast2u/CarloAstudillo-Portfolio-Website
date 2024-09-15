@@ -99,12 +99,11 @@ header.sticky .navbrand-logo-color{
     height: 125%; /* Adjust height to control the size of the circle */
     border-radius: 40%; /* Create a circle */
     background: url(images/bgimage.jpg) no-repeat center center;
-      background-size: cover;
-      overflow: hidden;
-  filter: blur(1px) brightness(50%);
+    background-size: cover;
+    filter: blur(2px) brightness(35%);
     clip-path: inset(0 0 20% 0); /* Only display the top half of the circle */
     transform: translateX(-50%); /* Center the half-circle horizontally */
-    border: 10px solid rgba(0, 0, 0, .6); /* Transparent border */
+    border: 10px solid rgba(0, 0, 0, .1); /* Transparent border */
     box-sizing: border-box;
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -164,6 +163,27 @@ font-family: Inter;
     background:grey;
     align-items: center;
     justify-content: center;
+  }
+
+  .about-section{
+    background: url(images/annie-spratt-0aF_vV0xgQk-unsplash.jpg) no-repeat;
+  }
+  .h1About{
+    position: absolute;
+    z-index: 0;
+    font-size: 6vw;
+    color: rgba(255, 255, 255, 0.1);
+    font-family: Inter;
+    font-weight: 900;
+
+  }
+  .h2About{
+
+    color: white;
+    font-size: 50px;
+    font-family: Inter;
+    font-weight: 700;
+    z-index: 1;
   }
 
 

@@ -31,9 +31,14 @@
                     <a class="nav-link-edit active" href="#Home">Home</a>
                     <hr>
                   </li>
-                  <li class="nav-item me-4 mt-1">
-                    <a class="nav-link-edit" href="#AboutMe">About</a>
+                  <li class="nav-item dropdown me-4 mt-1">
+                    <a class="nav-link-edit dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
                     <hr>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#AboutMe">About Me</a></li>
+                      <li><a class="dropdown-item" href="#">Education</a></li>
+                      <li><a class="dropdown-item" href="#">Achievements</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item me-4 mt-1">
                     <a class="nav-link-edit" href="#Experience">Experience</a>
@@ -75,9 +80,17 @@
     </section>
   </div>
 
-  <section id="AboutMe" class="container-fluid test">
-    <h1>About Me</h1>
+
+  <!-- About me Section in the website -->
+  <section id="AboutMe" class="container-fluid about-section">
+    <div class="container justify-content-center d-flex align-items-center">
+      <h1 class="h1About">About</h1>
+      <h2 class="h2About mb-4">About Me</h2>
+    </div>
+      
   </section>
+
+
   <section id="Experience" class="container-fluid test">
     <h1>Experience</h1>
   </section>
