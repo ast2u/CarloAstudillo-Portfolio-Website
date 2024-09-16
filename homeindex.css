@@ -11,7 +11,7 @@ font-family: "Bebas Neue", sans-serif;
     font-weight: 900;
     font-variant: normal;
 }
-.navbrand-color-green{
+.uni-color-green{
     color:#7ed956
 }
 .navbrand-logopic{
@@ -76,7 +76,7 @@ header.sticky .navbrand-logo-color{
 
 
 .pictureport{
-    width: 500px;
+    width: 530px;
     height: auto;
     display: inline;
     position: relative;
@@ -95,7 +95,7 @@ header.sticky .navbrand-logo-color{
     position: absolute;
     top: 0;
     left: 50%; /* Align the half-circle to the center */
-    width: 140% ; /* Adjust width to control the size of the circle */
+    width: 135% ; /* Adjust width to control the size of the circle */
     height: 125%; /* Adjust height to control the size of the circle */
     border-radius: 40%; /* Create a circle */
     background: url(images/bgimage.jpg) no-repeat center center;
@@ -118,22 +118,20 @@ font-family: Inter;
   font-optical-sizing: auto;
   font-weight: bolder;
   color: white;
-  font-size:55px;
+  font-size:50px;
   font-style: normal;
+  letter-spacing: 1px;
 
 }
 .headlineh4-Text{
     font-family: Inter;
     color: white;
-    text-decoration: underline;
-    font-size: 18.5px;
-    font-weight: 300;
+    letter-spacing: 4px;
+    font-size: 15px;
+    font-weight: 600;
 }
-.headlinebody-Text{
-    padding: 15px 15px 0px 0px;
-    color: white;
-    font-family: Inter;
-    
+.headlineh2-Text{
+  color:white
 }
 .navbar-nav .open ul.dropdown-menu{ 
     border-radius:0px; 
