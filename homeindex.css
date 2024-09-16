@@ -43,7 +43,12 @@ font-family: "Bebas Neue", sans-serif;
 }
 .topbg-home{
     background-image: url(images/jack-b-ombUn7ergE4-unsplash.jpg);
+    width: 100%;
     background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     
 }
 header{
@@ -73,25 +78,32 @@ header.sticky .navbrand-logo-color{
     font-size: 20px;
     color: black;
 }
-.button-hire{
-  font-family: Inter;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 10px 22px ;
-  background-color: #7ed956 ;
-  color: white;
-  border: none;
-  border-radius:10px;
-  letter-spacing: 3px;
-  transition: .3s;
+
+.navbar-nav .open ul.dropdown-menu{ 
+    border-radius:0px; 
+    border:solid 1px red; 
+    border-width:1px 0;
 }
-.button-hire:active{
-  transform: scale(.92);
+.nav-item hr{
+    display: none;
 }
-.button-hire:hover{
-  opacity: 80%;
+.navbar{
+    background-color:transparent;
 }
-.pictureport{
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030; /* Ensure it is above other content */
+  }
+  
+  .sticky + .content {
+    padding-top: 56px; /* Adjust for the height of the navbar */
+  }
+
+
+
+  .pictureport{
     width: 530px;
     height: auto;
     display: inline;
@@ -130,7 +142,7 @@ header.sticky .navbrand-logo-color{
 }
 
 .headlineh1-Text{
-font-family: Inter;
+  font-family: "Rubik",sans-serif;
   font-optical-sizing: auto;
   font-weight: bolder;
   color: white;
@@ -140,36 +152,61 @@ font-family: Inter;
 
 }
 .headlineh4-Text{
-    font-family: Inter;
+  font-family: "Rubik",sans-serif;
     color: white;
     letter-spacing: 4px;
     font-size: 15px;
     font-weight: 600;
 }
 .headlineh2-Text{
-  color:white
+  color:white;
+  font-family: "Rubik",sans-serif;
 }
-.navbar-nav .open ul.dropdown-menu{ 
-    border-radius:0px; 
-    border:solid 1px red; 
-    border-width:1px 0;
+
+.button-hire{
+  font-family: "Inter",system-ui;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 10px 29px ;
+  background-color: #7ed956 ;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius:10px;
+  letter-spacing: 4px;
+  transition: .3s;
 }
-.nav-item hr{
-    display: none;
+.button-works{
+  font-family: "Inter",system-ui;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 10px 29px ;
+  background-color:black;
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius:10px;
+  letter-spacing: 2px;
+  transition: .3s;
 }
-.navbar{
-    background-color:transparent;
+.button-hire:active{
+  transform: scale(.92);
+  background-color: #1d5207;
+  border: none;
 }
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1030; /* Ensure it is above other content */
-  }
-  
-  .sticky + .content {
-    padding-top: 56px; /* Adjust for the height of the navbar */
-  }
+.button-works:active{
+  transform: scale(.92);
+  background-color: #ffffff;
+  color: black;
+}
+.button-hire:hover{
+  opacity: 90%;
+}
+.button-works:hover{
+  opacity: 84%;
+}
+
+
 
   .test{
     min-height: 100vh;
@@ -180,29 +217,44 @@ font-family: Inter;
   }
 
 
+
+
   .about-section{
-    background: url(images/annie-spratt-0aF_vV0xgQk-unsplash.jpg) no-repeat center center;
-    background-size: cover;
-  }
-  .about-head-container{
+    background-color: white;
     padding-top: 80px;
   }
-  .h1About{
+  .h1-About{
     position: absolute;
     z-index: 0;
-    font-size: 6vw;
-    color: rgba(255, 255, 255, 0.15);
-    font-family: Inter;
+    font-size:8vw;
+    color: rgba(0,0,0, 0.1);
+    font-family: "Rubik",sans-serif;
     font-weight: 900;
+    
 
   }
-  .h2About{
-
-    color: white;
-    font-size: 50px;
-    font-family: Inter;
-    font-weight: 700;
+  .h2-About{
+    background: url(images/cesar-couto-Z83CMY9ho-I-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    font-size: 75px;
+    font-family: "Rubik",sans-serif;
+    font-weight: 900;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
     z-index: 1;
+  }
+  .about-info-p{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: inter;
+  }
+  .about-pic{
+    border-radius: 100%;
+    width: 150px;
+    object-fit: cover;
   }
 
 
@@ -216,6 +268,13 @@ font-family: Inter;
       border: 1px solid white;
       margin: 0.5rem 0; 
     }
+    .circle-for-pic{
+      margin-top: 20px;
+    }
+    .about-pic{
+      margin-bottom: 30px;
+    }
+    
     header.sticky .nav-item hr {
         display: block;
         border: 1px solid black;
@@ -240,8 +299,5 @@ font-family: Inter;
       
     .custom-toggler.navbar-toggler{
         border-color: #7ed956;
-    }
-    .mobile-center{
-       /* need checking and testing */
     }
   }
