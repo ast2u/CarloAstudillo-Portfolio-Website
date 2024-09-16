@@ -73,8 +73,24 @@ header.sticky .navbrand-logo-color{
     font-size: 20px;
     color: black;
 }
-
-
+.button-hire{
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 22px ;
+  background-color: #7ed956 ;
+  color: white;
+  border: none;
+  border-radius:10px;
+  letter-spacing: 3px;
+  transition: .3s;
+}
+.button-hire:active{
+  transform: scale(.92);
+}
+.button-hire:hover{
+  opacity: 80%;
+}
 .pictureport{
     width: 530px;
     height: auto;
@@ -165,7 +181,7 @@ font-family: Inter;
 
 
   .about-section{
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(255,255,255,0.25)), url(images/annie-spratt-0aF_vV0xgQk-unsplash.jpg) no-repeat center center;
+    background: url(images/annie-spratt-0aF_vV0xgQk-unsplash.jpg) no-repeat center center;
     background-size: cover;
   }
   .about-head-container{
