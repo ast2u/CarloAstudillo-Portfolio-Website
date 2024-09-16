@@ -257,7 +257,7 @@ header.sticky .navbrand-logo-color{
     object-fit: cover;
   }
 
-
+/*fix */
 /* Mobile View */
 @media (max-width: 992px) {
     .mpHeadline{
