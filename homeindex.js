@@ -1,6 +1,14 @@
+document.addEventListener("DOMContentLoaded", function() {
+  var typed = new Typed(".auto-type", {
+    strings: ["Web Development", "Software Developer", "Cloud Enthusiast"],
+    typeSpeed: 90,
+    backSpeed: 80,
+    loop: true
+  });
+});
+
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
-
 
 
 function isDesktopView(){
@@ -33,3 +41,4 @@ window.addEventListener("scroll",function(){
       })
       
     })
+
