@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   var typed = new Typed(".auto-type", {
     strings: ["Web Development", "Software Developer", "Cloud Enthusiast"],
-    typeSpeed: 90,
+    typeSpeed: 80,
     backSpeed: 80,
     loop: true
   });
@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
-
 
 function isDesktopView(){
   return window.innerWidth > 992;
