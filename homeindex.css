@@ -288,6 +288,29 @@ header.sticky .navbrand-logo-color{
     font-size: 1.5rem;
     line-height: 1;
 }
+.button-cv{
+
+  background-color: #7ed956;
+  letter-spacing: 4px;
+  border: none;
+  font-family: Inter;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size:20px;
+  border-radius: 15px;
+  padding: 25px 40px;
+  color: white;
+  display: block;
+  margin: auto;
+  transition: .4s;
+}
+.button-cv:hover{
+  opacity: 80%;
+}
+.button-cv:active{
+  transform: scale(.9);
+  background-color: #1d5207;
+}
 
 
 /* Mobile View */
