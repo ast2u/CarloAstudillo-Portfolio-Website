@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   var typed = new Typed(".auto-type", {
-    strings: ["Web Development", "Software Development", "Cloud Enthusiast"],
+    strings: ["Web Development", "Software Development", "Cloud Computing"],
     typeSpeed: 70,
     backSpeed: 40,
     loop: true
