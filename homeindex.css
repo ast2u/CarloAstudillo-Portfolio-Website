@@ -42,7 +42,7 @@ font-family: "Bebas Neue", sans-serif;
     padding-top: 75px;
 }
 .topbg-home{
-    background-image: url(images/jack-b-ombUn7ergE4-unsplash.jpg);
+    background-image: url(background/jack-b-ombUn7ergE4-unsplash.jpg);
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -61,7 +61,7 @@ header{
     z-index:100000 ;
 }
 header.sticky{
-    padding: 0px 80px;
+    padding: 0px 35px;
     background: #fff
 }
 header.sticky ul li a{
@@ -126,7 +126,7 @@ header.sticky .navbrand-logo-color{
     width: 135% ; /* Adjust width to control the size of the circle */
     height: 125%; /* Adjust height to control the size of the circle */
     border-radius: 40%; /* Create a circle */
-    background: url(images/bgimage.jpg) no-repeat center center;
+    background: url(background/bgimage.jpg) no-repeat center center;
     background-size: cover;
     filter: blur(2px) brightness(35%);
     clip-path: inset(0 0 20% 0); /* Only display the top half of the circle */
@@ -234,30 +234,62 @@ header.sticky .navbrand-logo-color{
 
   }
   .h2-About{
-    background: url(images/cesar-couto-Z83CMY9ho-I-unsplash.jpg);
+    background: url(background/cesar-couto-Z83CMY9ho-I-unsplash.jpg);
     background-size: cover;
     background-position: center;
-    font-size: 75px;
+    font-size: 4.8rem;
     font-family: "Rubik",sans-serif;
     font-weight: 900;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent; 
+    text-align: center;
     z-index: 1;
   }
   .about-info-p{
     text-align: left;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 400;
-    font-family: inter;
+    font-family: "Rubik", sans-serif;
   }
   .about-pic{
     border-radius: 100%;
     width: 150px;
     object-fit: cover;
   }
+.intro-about, .more-info-about{
+  margin: 100px 5px;
+}
+.more-info-about h3{
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .25rem;
+}
+.info-list{
+  list-style: none;
+  margin-bottom: 4.2rem
+}
+.info-list li{
+  padding: 0 0 1.5rem 0;
+  margin-bottom: .6rem;
+}
+.info-list li strong{
+  font-family: "Rubik", sans-serif;
+  color: #313131;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+.info-list li span{
+  display: block;
+  font-family: "Rubik",sans-serif;
+    color: #888888;
+    font-size: 1.5rem;
+    line-height: 1;
+}
 
-/*fix */
+
 /* Mobile View */
 @media (max-width: 992px) {
     .mpHeadline{
@@ -288,7 +320,7 @@ header.sticky .navbrand-logo-color{
         color: black ;
     }
     header{
-        background:url(images/jack-b-ombUn7ergE4-unsplash.jpg);
+        background:url(background/jack-b-ombUn7ergE4-unsplash.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         transition: .5s;
