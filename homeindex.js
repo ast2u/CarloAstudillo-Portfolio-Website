@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
   var typed = new Typed(".auto-type", {
-    strings: ["Web Development", "Software Developer", "Cloud Enthusiast"],
-    typeSpeed: 80,
-    backSpeed: 80,
+    strings: ["Web Development", "Software Development", "Cloud Enthusiast"],
+    typeSpeed: 70,
+    backSpeed: 40,
     loop: true
   });
 });
