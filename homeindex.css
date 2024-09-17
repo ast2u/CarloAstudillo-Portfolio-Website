@@ -225,7 +225,7 @@ header.sticky .navbrand-logo-color{
     background-color: white;
     padding-top: 50px;
   }
-  .h1-About{
+  .h1-sections{
     position: absolute;
     z-index: 0;
     font-size:8vw;
@@ -235,7 +235,7 @@ header.sticky .navbrand-logo-color{
     
 
   }
-  .h2-About{
+  .h2-sections{
     background: url(background/cesar-couto-Z83CMY9ho-I-unsplash.jpg);
     background-size: cover;
     background-position: center;
@@ -250,7 +250,7 @@ header.sticky .navbrand-logo-color{
   }
   .about-info-p{
     text-align: left;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 400;
     font-family: "Rubik", sans-serif;
   }
@@ -265,7 +265,8 @@ header.sticky .navbrand-logo-color{
 .more-info-about h3{
   font-family: "Rubik", sans-serif;
   text-transform: uppercase;
-  letter-spacing: .25rem;
+  width:  60% ;
+  letter-spacing: .1rem;
   font-size: 1.4rem;
 }
 .info-list{
@@ -295,15 +296,15 @@ header.sticky .navbrand-logo-color{
   text-decoration: none;
 }
 a.button-cv button{
-  background-color: #7ed956;
+  background-color: black;
   letter-spacing: 4px;
   border: none;
   font-family: Inter;
   text-transform: uppercase;
   font-weight: bold;
-  font-size:20px;
+  font-size:17px;
   border-radius: 15px;
-  padding: 25px 40px;
+  padding: 20px 30px;
   color: white;
   display: block;
   margin: 40px  auto;
@@ -314,7 +315,28 @@ a.button-cv button:hover{
 }
 a.button-cv button:active{
   transform: scale(.9);
-  background-color: #1d5207;
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+}
+.skills-row h5{
+  font-family: "Rubik", sans-serif;
+  color: #313131;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+.skills-row ul li{
+  font-family: "Rubik",sans-serif;
+    color: #888888;
+    font-size: 1.1rem;
+    line-height: 2.5;
+}
+
+.education-section{
+  background-color: #ebebeb;
+  padding-top: 50px;
 }
 
 
