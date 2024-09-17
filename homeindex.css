@@ -14,6 +14,8 @@ font-family: "Bebas Neue", sans-serif;
 .uni-color-green{
     color:#7ed956
 }
+
+/* Navigation Bar */
 .navbrand-logopic{
    width: 60px;
    transition: .5s;
@@ -102,7 +104,7 @@ header.sticky .navbrand-logo-color{
   }
 
 
-
+/* Headline of the Page */
   .pictureport{
     width: 530px;
     height: auto;
@@ -122,22 +124,22 @@ header.sticky .navbrand-logo-color{
     content: "";
     position: absolute;
     top: 0;
-    left: 50%; /* Align the half-circle to the center */
-    width: 135% ; /* Adjust width to control the size of the circle */
-    height: 125%; /* Adjust height to control the size of the circle */
-    border-radius: 40%; /* Create a circle */
+    left: 50%; 
+    width: 135% ; 
+    height: 125%; 
+    border-radius: 40%; 
     background: url(background/bgimage.jpg) no-repeat center center;
     background-size: cover;
     filter: blur(2px) brightness(35%);
-    clip-path: inset(0 0 20% 0); /* Only display the top half of the circle */
-    transform: translateX(-50%); /* Center the half-circle horizontally */
-    border: 10px solid rgba(0, 0, 0, .1); /* Transparent border */
+    clip-path: inset(0 0 20% 0); 
+    transform: translateX(-50%); 
+    border: 10px solid rgba(0, 0, 0, .1); 
     box-sizing: border-box;
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
 .circle-for-pic:hover:before{
-    opacity: 1; /* Show on hover */
+    opacity: 1; 
     
 }
 
@@ -220,7 +222,7 @@ header.sticky .navbrand-logo-color{
 
 
 
-
+/* About section of the page */
   .about-section{
     background-color: white;
     padding-top: 50px;
@@ -238,6 +240,7 @@ header.sticky .navbrand-logo-color{
   .h2-sections{
     background: url(background/cesar-couto-Z83CMY9ho-I-unsplash.jpg);
     background-size: cover;
+    filter: brightness(60%);
     background-position: center;
     font-size: 4.6rem;
     font-family: "Rubik",sans-serif;
@@ -260,7 +263,7 @@ header.sticky .navbrand-logo-color{
     object-fit: cover;
   }
 .intro-about, .more-info-about{
-  margin: 100px 10px 5px 5px;
+  margin: 75px 10px 5px 5px;
 }
 .more-info-about h3{
   font-family: "Rubik", sans-serif;
@@ -333,13 +336,127 @@ a.button-cv button:active{
     font-size: 1.1rem;
     line-height: 2.5;
 }
-
-.education-section{
-  background-color: #ebebeb;
-  padding-top: 50px;
+/* Credentials section of the page */
+.credentials-section{
+background-color: #ebebeb;
+padding-top: 50px;
+font-family: "Rubik",sans-serif;
+}
+.timeline{
+  position: relative;
+  max-width: 1200px;
+  margin: 50px auto;
+  z-index: 1;
+}
+.timeline::after{
+  content: '';
+  position: absolute;
+  width:6px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+  animation: moveline 3s linear forwards;
+}
+@keyframes moveline{
+  0%{
+    height:0;
+  }
+  100%{
+    height:100%;
+  }
 }
 
 
+.timeline-container:nth-child(1){
+  animation-delay:0s ;
+}
+.timeline-container:nth-child(2){
+  animation-delay:1s ;
+}
+.timeline-container:nth-child(3){
+  animation-delay:2s ;
+}
+
+.timeline-container{
+  padding: 10px 50px;
+  position: relative;
+  width:50%;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+}
+@keyframes movedown{
+  0%{
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+.text-box{
+  padding: 20px 30px;
+  background: #fff;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.text-box h2{
+  font-weight: 600;
+}
+.text-box small{
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.text-box ul{
+  list-style: none;
+  font-size: 17.5px;
+}
+.left-container{
+  left:0;
+}
+.right-container{
+  left:50%;
+}
+.timeline-container img{
+  position: absolute;
+  width:40px;
+  border-radius: 50%;
+  right:-20px;
+  top:32px;
+  z-index: 10;
+}
+.right-container img{
+  left: -20px;
+}
+.left-container-arrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom:15px solid transparent ;
+  border-left: 15px solid white;
+  right: -15px;
+}
+.right-container-arrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom:15px solid transparent ;
+  border-right: 15px solid white;
+  left: -15px;
+  
+}
 /* Mobile View */
 @media (max-width: 992px) {
     .mpHeadline{
@@ -381,5 +498,36 @@ a.button-cv button:active{
       
     .custom-toggler.navbar-toggler{
         border-color: #7ed956;
+    }
+  }
+
+  @media screen and (max-width:600px) {
+    .timeline{
+      margin:50px auto;
+    }
+    .timeline::after{
+      left:31px;
+    }
+    .timeline-container{
+      width:100%;
+      padding-left: 80px;
+      padding-right: 25px;
+    }
+    .text-box{
+      font-size: 13px;
+    }
+    .text-box small{
+      margin-bottom: 10px;
+    }
+    .right-container{
+      left: 0;
+    }
+    .left-container img, .right-container img{
+      left:10px;
+    }
+    .left-container-arrow, .right-container-arrow{
+      border-right: 15px solid #fff;
+      border-left: 0;
+      left:-15px;
     }
   }
