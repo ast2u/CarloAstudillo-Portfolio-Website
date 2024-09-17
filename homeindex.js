@@ -5,6 +5,29 @@ document.addEventListener("DOMContentLoaded", function() {
     backSpeed: 40,
     loop: true
   });
+
+  const containers = document.querySelectorAll('.timeline-container');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+        const index = Array.from(containers).indexOf(element);
+        // Add a class to trigger the animation with a delay
+        setTimeout(() => {
+          element.classList.add('show');
+        }, index * 900); // 1 second (1000ms) delay between each container
+        observer.unobserve(element); // Optional: Stop observing after animation
+      }
+    });
+  }, {
+    threshold: 0.1 // Adjust as necessary
+  });
+
+  containers.forEach(container => {
+    observer.observe(container);
+  });
+
 });
 
 
@@ -24,6 +47,13 @@ window.addEventListener("scroll",function(){
       var header = document.querySelector("header");
       header.classList.toggle("sticky", window.scrollY>0)
 
+    const timeline = document.querySelector('.timeline');
+    const timelinePosition = timeline.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.3;
+
+    if (timelinePosition < screenPosition) {
+      timeline.classList.add('active');
+    }
 
   // Navbar adding active when its on the screen
       sections.forEach(sec=>{
