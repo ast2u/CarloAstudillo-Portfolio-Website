@@ -167,9 +167,10 @@ header.sticky .navbrand-logo-color{
   font-family: "Inter",system-ui;
   font-size: 17px;
   font-weight: 600;
-  padding: 10px 29px ;
+  padding: 13px 25px ;
   background-color: #7ed956 ;
   color: white;
+  text-decoration: none;
   cursor: pointer;
   border: none;
   border-radius:10px;
@@ -180,10 +181,11 @@ header.sticky .navbrand-logo-color{
   font-family: "Inter",system-ui;
   font-size: 17px;
   font-weight: 600;
-  padding: 10px 29px ;
+  padding: 13px 25px ;
   background-color:black;
   color: white;
   cursor: pointer;
+  text-decoration: none;
   border: 1px solid white;
   border-radius:10px;
   letter-spacing: 2px;
@@ -221,7 +223,7 @@ header.sticky .navbrand-logo-color{
 
   .about-section{
     background-color: white;
-    padding-top: 80px;
+    padding-top: 50px;
   }
   .h1-About{
     position: absolute;
@@ -237,7 +239,7 @@ header.sticky .navbrand-logo-color{
     background: url(background/cesar-couto-Z83CMY9ho-I-unsplash.jpg);
     background-size: cover;
     background-position: center;
-    font-size: 4.8rem;
+    font-size: 4.6rem;
     font-family: "Rubik",sans-serif;
     font-weight: 900;
     -webkit-background-clip: text;
@@ -248,22 +250,23 @@ header.sticky .navbrand-logo-color{
   }
   .about-info-p{
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
     font-family: "Rubik", sans-serif;
   }
   .about-pic{
     border-radius: 100%;
-    width: 150px;
+    width: 200px;
     object-fit: cover;
   }
 .intro-about, .more-info-about{
-  margin: 100px 5px;
+  margin: 100px 10px 5px 5px;
 }
 .more-info-about h3{
   font-family: "Rubik", sans-serif;
   text-transform: uppercase;
   letter-spacing: .25rem;
+  font-size: 1.4rem;
 }
 .info-list{
   list-style: none;
@@ -278,18 +281,20 @@ header.sticky .navbrand-logo-color{
   color: #313131;
   text-transform: uppercase;
   letter-spacing: .2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 3rem;
 }
 .info-list li span{
   display: block;
   font-family: "Rubik",sans-serif;
     color: #888888;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     line-height: 1;
 }
 .button-cv{
-
+  text-decoration: none;
+}
+a.button-cv button{
   background-color: #7ed956;
   letter-spacing: 4px;
   border: none;
@@ -301,13 +306,13 @@ header.sticky .navbrand-logo-color{
   padding: 25px 40px;
   color: white;
   display: block;
-  margin: auto;
+  margin: 40px  auto;
   transition: .4s;
 }
-.button-cv:hover{
-  opacity: 80%;
+a.button-cv button:hover{
+  opacity: 85%;
 }
-.button-cv:active{
+a.button-cv button:active{
   transform: scale(.9);
   background-color: #1d5207;
 }
