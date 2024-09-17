@@ -263,7 +263,7 @@ header.sticky .navbrand-logo-color{
     object-fit: cover;
   }
 .intro-about, .more-info-about{
-  margin: 75px 10px 5px 5px;
+  margin: 75px 5px 20px 5px;
 }
 .more-info-about h3{
   font-family: "Rubik", sans-serif;
@@ -336,6 +336,8 @@ a.button-cv button:active{
     font-size: 1.1rem;
     line-height: 2.5;
 }
+
+
 /* Credentials section of the page */
 .credentials-section{
 background-color: #ebebeb;
@@ -345,7 +347,7 @@ font-family: "Rubik",sans-serif;
 .timeline{
   position: relative;
   max-width: 1200px;
-  margin: 50px auto;
+  margin: 0px auto;
   z-index: 1;
 }
 .timeline::after{
@@ -353,13 +355,18 @@ font-family: "Rubik",sans-serif;
   position: absolute;
   width:6px;
   height: 100%;
-  background: #fff;
+  background: white;
   top: 0;
   left: 50%;
   margin-left: -3px;
   z-index: -1;
-  animation: moveline 3s linear forwards;
+  opacity: 0;
 }
+.timeline.active::after {
+  animation: moveline 3s linear forwards;
+  opacity: 1;
+}
+
 @keyframes moveline{
   0%{
     height:0;
@@ -369,27 +376,23 @@ font-family: "Rubik",sans-serif;
   }
 }
 
-
-.timeline-container:nth-child(1){
-  animation-delay:0s ;
-}
-.timeline-container:nth-child(2){
-  animation-delay:1s ;
-}
-.timeline-container:nth-child(3){
-  animation-delay:2s ;
-}
-
 .timeline-container{
   padding: 10px 50px;
   position: relative;
   width:50%;
-  animation: movedown 1s linear forwards;
   opacity: 0;
+  transform: translateY(-30px); /* Keep this as the starting point */
+  transition: opacity 1s ease, transform 1s ease;
 }
+
+.timeline-container.show {
+  opacity: 1;
+  transform: translateY(0px); /* Animate into place */
+}
+
 @keyframes movedown{
   0%{
-    opacity: 1;
+    opacity:1;
     transform: translateY(-30px);
   }
   100%{
@@ -398,14 +401,23 @@ font-family: "Rubik",sans-serif;
   }
 }
 
+.timeline-h1{
+  padding: 100px 0px 50px 0px;
+  text-align: center;
+  letter-spacing: 7px;
+  color: black;
+  font-weight: 800;
+  font-size: 1.6rem;
+}
 
 .text-box{
   padding: 20px 30px;
-  background: #fff;
+  background-color: white;
   position: relative;
   border-radius: 6px;
   font-size: 15px;
 }
+
 .text-box h2{
   font-weight: 600;
 }
