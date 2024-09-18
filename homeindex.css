@@ -262,8 +262,11 @@ header.sticky .navbrand-logo-color{
     width: 200px;
     object-fit: cover;
   }
-.intro-about, .more-info-about{
-  margin: 75px 5px 20px 5px;
+.intro-about{
+  margin: 130px 5px 20px 5px;
+}
+.more-info-about{
+  margin: 80px 5px 30px 5px;
 }
 .more-info-about h3{
   font-family: "Rubik", sans-serif;
@@ -343,11 +346,14 @@ a.button-cv button:active{
 background-color: #ebebeb;
 padding-top: 50px;
 font-family: "Rubik",sans-serif;
+padding-bottom:100px ;
+
 }
 .timeline{
   position: relative;
   max-width: 1200px;
   margin: 0px auto;
+
   z-index: 1;
 }
 .timeline::after{
@@ -363,6 +369,29 @@ font-family: "Rubik",sans-serif;
   opacity: 0;
 }
 .timeline.active::after {
+  animation: moveline 3s linear forwards;
+  opacity: 1;
+}
+
+.timeline2{
+  position: relative;
+  max-width: 1200px;
+  margin: 0px auto;  
+  z-index: 1;
+}
+.timeline2::after{
+  content: '';
+  position: absolute;
+  width:6px;
+  height: 100%;
+  background: white;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+  opacity: 0;
+}
+.timeline2.active::after {
   animation: moveline 3s linear forwards;
   opacity: 1;
 }
@@ -390,6 +419,20 @@ font-family: "Rubik",sans-serif;
   transform: translateY(0px); /* Animate into place */
 }
 
+.timeline-container2{
+  padding: 10px 50px;
+  position: relative;
+  width:50%;
+  opacity: 0;
+  transform: translateY(-30px); /* Keep this as the starting point */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.timeline-container2.show {
+  opacity: 1;
+  transform: translateY(0px); /* Animate into place */
+}
+
 @keyframes movedown{
   0%{
     opacity:1;
@@ -402,10 +445,10 @@ font-family: "Rubik",sans-serif;
 }
 
 .timeline-h1{
-  padding: 100px 0px 50px 0px;
+  padding: 100px 0px 80px 0px;
   text-align: center;
   letter-spacing: 7px;
-  color: black;
+  color:black;
   font-weight: 800;
   font-size: 1.6rem;
 }
@@ -443,6 +486,15 @@ font-family: "Rubik",sans-serif;
   top:32px;
   z-index: 10;
 }
+.timeline-container2 img{
+  position: absolute;
+  width:40px;
+  border-radius: 50%;
+  right:-20px;
+  top:32px;
+  z-index: 10;
+}
+
 .right-container img{
   left: -20px;
 }
@@ -469,6 +521,8 @@ font-family: "Rubik",sans-serif;
   left: -15px;
   
 }
+
+
 /* Mobile View */
 @media (max-width: 992px) {
     .mpHeadline{
@@ -520,7 +574,19 @@ font-family: "Rubik",sans-serif;
     .timeline::after{
       left:31px;
     }
+
+    .timeline2{
+      margin:50px auto;
+    }
+    .timeline2::after{
+      left:31px;
+    }
     .timeline-container{
+      width:100%;
+      padding-left: 80px;
+      padding-right: 25px;
+    }
+    .timeline-container2{
       width:100%;
       padding-left: 80px;
       padding-right: 25px;
