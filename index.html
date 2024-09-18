@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="logopic/CAlogo-removebg.png" type="image/x-icon"/> 
     <link rel="stylesheet" href="homeindex.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fontawesome.com/icons/user-tie?f=classic&s=solid">  
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,13 +82,13 @@
 
   <!-- About me Section in the website -->
   <section id="AboutMe" class="container-fluid about-section">
-    <div class="container justify-content-center d-flex align-items-center">
+    <div class="container justify-content-center d-flex align-items-center" data-aos="fade-up">
       <h1 class="h1-sections">About</h1>
       <h2 class="h2-sections">About Me</h2>
     </div>
       
-    <div class="container intro-about w-50">
-      <div class="row align-items-center">
+    <div class="container intro-about w-50 " data-aos="fade-up">
+      <div class="row align-items-center" >
         <div class="col-md-3 d-flex justify-content-center"><img src="images/PhotoPort2.png" alt="CirclePicture" class="about-pic img-fluid"></div>
         <div class="col-md-9"><p class="about-info-p">A motivated aspiring Cloud Engineer and Software Developer with a passion for contributing to team success. 
           Dedicated to delivering results with 100% commitment to any project, while continuously enhancing my skills and knowledge. Eager 
@@ -97,7 +98,7 @@
 
     <div class="container w-75 more-info-about">
     <div class="row">
-      <div class="col-md-6 col-12 order-md-1 order-1">
+      <div class="col-md-6 col-12 order-md-1 order-1" data-aos="fade-right">
         <h3>Personal Information</h3>
         <ul class="info-list">
           <li ><strong>FULLNAME:</strong>
@@ -110,7 +111,7 @@
           <span>carloasto11@gmail.com</span></li>
         </ul>
       </div>
-      <div class="col-md-6 col-12 order-md-2 order-2">
+      <div class="col-md-6 col-12 order-md-2 order-2" data-aos="fade-left">
         <h3>Skills</h3>
         <div class="row skills-row row-cols-2">
           <div class="col">
@@ -152,19 +153,20 @@
         </ul>
       </div>
     </div>
-    <a class="button-cv" href="file-assets/CV_Astudillo.pdf" title="CV_Astudillo" download="CV_Astudillo">
-    <button class="button-cv" download="CV_Astudillo.pdf">Download CV</button></a>
+    <a class="button-cv" href="file-assets/CV_Astudillo.pdf" title="CV_Astudillo" download="CV_Astudillo" >
+    <button class="button-cv" download="CV_Astudillo.pdf" data-aos="flip-up">Download CV</button></a>
   </div>
 
   </section>
 
+  <!-- Credentials section -->
   <section id="Credentials" class="container-fluid credentials-section">
-    <div class="container justify-content-center d-flex align-items-center">
+    <div class="container justify-content-center d-flex align-items-center" data-aos="fade-up">
       <h1 class="h1-sections">Credentials</h1>
       <h2 class="h2-sections mb-4">Credentials</h2>
    
     </div>
-    <h1 class="timeline-h1">Education</h1>
+    <h1 class="timeline-h1" data-aos="fade-up">Education</h1>
     <div class="timeline">
 
       <div class="timeline-container left-container">
@@ -206,17 +208,49 @@
       </div>
 
       </div>
-      <h1 class="timeline-h1">Work Experience</h1>
+      <h1 class="timeline-h1" data-aos="fade-up">Work Experience</h1>
+      <div class="timeline2">
+
+        <div class="timeline-container2 right-container">
+          <img src="logopic/coca-cola-beverages-logo.png" alt="NU Fairview" title="NU Philippines">
+          <div class="text-box">
+            <h2>Coca-Cola Beverages Philippines</h2>
+            <small>September 2019 - October 2019</small>
+            <ul>
+              <li><strong>Internship Trainee</strong></li>
+              <li>Internship</li>
+              <li>Finance Department</li>
+            </ul>
+            <span class="right-container-arrow"></span>
+          </div>
+        </div>
+  
+        <div class="timeline-container2 left-container">
+          <img src="logopic/Black-logo-ghd.jpg" alt="AMA Computer College" title="AMA Computer College">
+          <div class="text-box">
+            <h2>GHD Group Philippines</h2>
+            <small>November 2023 - June 2024</small>
+            <ul>
+              <li><strong>Content Services Intern | DevOps Intern</strong></li>
+              <li>Internship</li>
+              <li>CMS Team | DevOps Team</li>
+            </ul>
+            <span class="left-container-arrow"></span>
+          </div>
+        </div>
+  
+        </div>
 
       
   </section>
-  <section id="Works" class="container-fluid test">
+  <section id="Works" class="container-fluid test bg-white">
     <h1>Works</h1>
 
   </section>
   <section id="Contacts" class="container-fluid test"><h1>Contacts</h1></section>
   <script src="homeindex.js"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <footer>
     <div class="container-fluid">
