@@ -259,7 +259,7 @@ header.sticky .navbrand-logo-color{
   }
   .about-pic{
     border-radius: 100%;
-    width: 200px;
+    width: 150px;
     object-fit: cover;
   }
 .intro-about{
@@ -343,7 +343,7 @@ a.button-cv button:active{
 
 /* Credentials section of the page */
 .credentials-section{
-background-color: #ebebeb;
+background-color: #dddddd;
 padding-top: 50px;
 font-family: "Rubik",sans-serif;
 padding-bottom:100px ;
@@ -448,9 +448,9 @@ padding-bottom:100px ;
   padding: 100px 0px 80px 0px;
   text-align: center;
   letter-spacing: 7px;
-  color:black;
+  color:white;
   font-weight: 800;
-  font-size: 1.6rem;
+  font-size: 2.5rem;
 }
 
 .text-box{
@@ -522,6 +522,12 @@ padding-bottom:100px ;
   
 }
 
+
+/* works section */
+.works-section{
+  padding: 20px;
+  background-color: white;
+}
 
 /* Mobile View */
 @media (max-width: 992px) {
