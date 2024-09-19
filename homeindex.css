@@ -230,7 +230,7 @@ header.sticky .navbrand-logo-color{
   .h1-sections{
     position: absolute;
     z-index: 0;
-    font-size:6.5vw;
+    font-size:5vw;
     color: rgba(0,0,0, 0.1);
     font-family: "Rubik",sans-serif;
     font-weight: 900;
@@ -240,7 +240,7 @@ header.sticky .navbrand-logo-color{
   }
   .h2-sections{
     color: black;
-    font-size: 4.2rem;
+    font-size: 3rem;
     font-family: "Rubik",sans-serif;
     font-weight: 900;
     text-align: center;
@@ -249,7 +249,7 @@ header.sticky .navbrand-logo-color{
   }
   .h2-sections-white{
     color: white;
-    font-size: 4.2rem;
+    font-size: 3rem;
     font-family: "Rubik",sans-serif;
     font-weight: 900;
     text-align: center;
@@ -294,7 +294,7 @@ header.sticky .navbrand-logo-color{
   text-transform: uppercase;
   letter-spacing: .2rem;
   font-size: 1.2rem;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 .info-list li span{
   display: block;
@@ -826,6 +826,47 @@ padding-bottom:100px ;
   }
 
   @media screen and (max-width:600px) {
+    .headlineh1-Text{
+
+      font-size:39px;
+      letter-spacing: 1px;
+    
+    }
+    .headlineh4-Text{
+
+        letter-spacing: 4px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .headlineh2-Text{
+      font-size: 1.2rem;
+    }
+    .button-hire{
+
+      padding: 10px 20px ;
+
+    }
+    .button-works{
+
+      padding: 10px 20px ;
+
+    }
+    .about-info-p{
+      font-size: .7rem;
+      font-weight: 500;
+    }
+
+    .skills-row h5{
+
+      letter-spacing: 0;
+      line-height: 1.3;
+      font-size: 1rem;
+    }
+    .skills-row ul li{
+        font-size: .9rem;
+        line-height: 1.5;
+    }
+
     .timeline{
       margin:50px auto;
     }
@@ -862,7 +903,7 @@ padding-bottom:100px ;
       left:10px;
     }
     .left-container-arrow, .right-container-arrow{
-      border-right: 15px solid #fff;
+      border-right: 15px solid #dddddd;
       border-left: 0;
       left:-15px;
     }
@@ -870,10 +911,9 @@ padding-bottom:100px ;
       width: 100%; /* Make it full width on smaller screens */
       background-color: grey ;
       max-width: 90%;
+      height: 90%;
       margin: 0 auto;
     }
   
-    .swiper-slide img {
-      object-fit: cover; /* Adjust object-fit for smaller screens */
-    }
+
   }
