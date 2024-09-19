@@ -225,30 +225,35 @@ header.sticky .navbrand-logo-color{
 /* About section of the page */
   .about-section{
     background-color: white;
-    padding-top: 50px;
+    padding-top: 120px;
   }
   .h1-sections{
     position: absolute;
     z-index: 0;
-    font-size:8vw;
+    font-size:6.5vw;
     color: rgba(0,0,0, 0.1);
     font-family: "Rubik",sans-serif;
     font-weight: 900;
+    overflow:hidden;
     
 
   }
   .h2-sections{
-    background: url(background/cesar-couto-Z83CMY9ho-I-unsplash.jpg);
-    background-size: cover;
-    filter: brightness(60%);
-    background-position: center;
-    font-size: 4.6rem;
+    color: black;
+    font-size: 4.2rem;
     font-family: "Rubik",sans-serif;
     font-weight: 900;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; 
     text-align: center;
+    overflow:hidden;
+    z-index: 1;
+  }
+  .h2-sections-white{
+    color: white;
+    font-size: 4.2rem;
+    font-family: "Rubik",sans-serif;
+    font-weight: 900;
+    text-align: center;
+    overflow:hidden;
     z-index: 1;
   }
   .about-info-p{
@@ -263,7 +268,7 @@ header.sticky .navbrand-logo-color{
     object-fit: cover;
   }
 .intro-about{
-  margin: 130px 5px 20px 5px;
+  margin: 80px 5px 20px 5px;
 }
 .more-info-about{
   margin: 80px 5px 30px 5px;
@@ -325,6 +330,16 @@ a.button-cv button:active{
   border: 1px solid black;
   background-color: white;
 }
+.button-wrapper{
+  position: relative;
+}
+.button-wrapper canvas{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+}
 .skills-row h5{
   font-family: "Rubik", sans-serif;
   color: #313131;
@@ -339,12 +354,59 @@ a.button-cv button:active{
     font-size: 1.1rem;
     line-height: 2.5;
 }
+/* awards section */
+.awards-section{
+  background-color: #dddddd;
+  padding-top:100px;
+  padding-bottom: 30px;
+  font-family: "Rubik",sans-serif;
+  
+  }
+  .swiper {
+    width:100%;
+    height: 530px;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #949494; /* White background for the empty space */
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    display: block;
+    margin: 0 auto;
+  }
+  .card-awards h3{
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+  .card-awards ul li{
+    list-style: none;
+    font-size: 1.4rem;
+  }
+  .award-2 img{
+    width: 100%;
+    height: 80%;
+    border-radius: 30px;
+    background-color:#949494 ;
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    display: block;
+    
+  }
+
+
 
 
 /* Credentials section of the page */
 .credentials-section{
-background-color: #dddddd;
-padding-top: 50px;
+background-color: white;
+padding-top: 120px;
 font-family: "Rubik",sans-serif;
 padding-bottom:100px ;
 
@@ -353,7 +415,6 @@ padding-bottom:100px ;
   position: relative;
   max-width: 1200px;
   margin: 0px auto;
-
   z-index: 1;
 }
 .timeline::after{
@@ -361,7 +422,7 @@ padding-bottom:100px ;
   position: absolute;
   width:6px;
   height: 100%;
-  background: white;
+  background: #dddddd;
   top: 0;
   left: 50%;
   margin-left: -3px;
@@ -384,7 +445,7 @@ padding-bottom:100px ;
   position: absolute;
   width:6px;
   height: 100%;
-  background: white;
+  background: #dddddd;
   top: 0;
   left: 50%;
   margin-left: -3px;
@@ -448,7 +509,7 @@ padding-bottom:100px ;
   padding: 100px 0px 80px 0px;
   text-align: center;
   letter-spacing: 7px;
-  color:white;
+  color:black;
   font-weight: 800;
   font-size: 2.5rem;
 }
@@ -456,6 +517,7 @@ padding-bottom:100px ;
 .text-box{
   padding: 20px 30px;
   background-color: white;
+  border: 4px solid #dddddd;
   position: relative;
   border-radius: 6px;
   font-size: 15px;
@@ -463,6 +525,7 @@ padding-bottom:100px ;
 
 .text-box h2{
   font-weight: 600;
+  color: black;
 }
 .text-box small{
   display: inline-block;
@@ -506,7 +569,7 @@ padding-bottom:100px ;
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom:15px solid transparent ;
-  border-left: 15px solid white;
+  border-left: 15px solid #dddddd;
   right: -15px;
 }
 .right-container-arrow{
@@ -517,18 +580,207 @@ padding-bottom:100px ;
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom:15px solid transparent ;
-  border-right: 15px solid white;
+  border-right: 15px solid #dddddd;
   left: -15px;
   
 }
 
 
+
 /* works section */
 .works-section{
-  padding: 20px;
-  background-color: white;
+  padding: 120px 0px;
+  overflow: hidden;
+  background-color: #dddddd;
+  font-family: "Rubik",sans-serif;
 }
 
+.projects-in-cards{
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+.custom-row{
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+}
+.mycard-style{
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 8px solid white;
+  position: relative;
+}
+.mycard-style img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.mycard-style:hover .mycard-body{
+  right: 0;
+}
+
+.mycard-body{
+  width: 100%;
+  height: 100%;
+  top:0;
+  right:-100%;
+  position: absolute;
+  background: #0000002f;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 1s;
+}
+.mycard-title{
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.mycard-subtitle{
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 500;
+}
+.mycard-info{
+  font-size: 1rem;
+  line-height: 25px;
+  margin: 40px 0;
+  font-weight: 400;
+}
+.mycard-btn{
+  color: white;
+  background-color: #7ed956;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .1s;
+  width: 120px;
+}
+.mycard-btn:active{
+  transform: scale(.92);
+}
+
+
+/* contact section */
+.contact-section{
+  overflow: hidden;
+  background-color: white;
+  padding-top: 80px;
+  width: 100%;
+  position: relative;
+}
+.img-bg-footer{
+  background: url(background/annie-spratt-0aF_vV0xgQk-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(.4);
+  background-attachment: fixed;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+}
+.box-socials-1{
+  position: relative;
+  background-color: rgb(124, 124, 124);
+  padding: 30px 0;
+  transition: .2s;
+  
+}
+.box-socials-1:hover{
+  background-color: rgba(27, 27, 27, 0.342);
+}
+.box-socials-1 a{
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 800;
+  color: black;
+  text-transform: capitalize;
+  
+}
+.box-socials-2{
+  position: relative;
+  background-color: #97c6f5;
+  padding: 30px 0;
+  transition: .2s;
+  
+}
+.box-socials-2:hover{
+  background-color: #789fc5
+}
+.box-socials-2 a{
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0a66c2;
+  text-transform: capitalize;
+  
+}
+
+.box-socials-3{
+  position: relative;
+  background-color: #699bf0;
+  padding: 30px 0;
+  transition: .2s;
+  
+}
+.box-socials-3:hover{
+  background-color: #577dc0;
+}
+.box-socials-3 a{
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 800;
+  color:#0e3981;
+  text-transform: capitalize;
+  
+}
+
+
+.footer-section{
+  overflow: hidden;
+  position: relative;
+  font-family: "Rubik",sans-serif;
+  padding: 7em 0;
+  color: white;
+  font-size: 16px;
+
+}
+.foot-1 ul li{
+  list-style: none;
+}
+.foot-2 a{
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+.foot-2 a:hover{
+  opacity: .7;
+  text-decoration:underline;
+}
+.foot-2 ul li{
+  list-style:square;
+}
+.foot-3 ul li{
+  list-style: none;
+}
 /* Mobile View */
 @media (max-width: 992px) {
     .mpHeadline{
@@ -613,5 +865,15 @@ padding-bottom:100px ;
       border-right: 15px solid #fff;
       border-left: 0;
       left:-15px;
+    }
+    .swiper {
+      width: 100%; /* Make it full width on smaller screens */
+      background-color: grey ;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  
+    .swiper-slide img {
+      object-fit: cover; /* Adjust object-fit for smaller screens */
     }
   }

@@ -1,4 +1,24 @@
 
+
+
+
+document.getElementsByClassName("cv-btn")[0].addEventListener("click",()=>{
+  let canvas = document.createElement("canvas");
+  canvas.width=600;
+  canvas.height=600;
+  let container = document.getElementsByClassName("button-wrapper")[0];
+  container.appendChild(canvas);
+
+  let confetti_button = confetti.create(canvas);
+  confetti_button({
+    particleCount:300,
+    spread:500,
+    startVelocity:20,
+    scalar:.8,
+    ticks:50
+  }).then(()=> container.removeChild(canvas));
+})
+
 function createObserver(containers, delay) {
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -23,10 +43,54 @@ function createObserver(containers, delay) {
 
 document.addEventListener("DOMContentLoaded", function() {
 
+
+
+  const swiper = new Swiper('.swiper', {
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+
   AOS.init({
     duration: 1000, 
     once: true      
   });
+
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Trigger confetti only once
+            confetti({
+              particleCount:450,
+              spread: 300
+            });
+            observer.unobserve(entry.target); // Stop observing after triggering
+        }
+    });
+}, {
+    threshold: 0.5 // Adjust based on when you want the effect to trigger
+});
+
+// Start observing the target element
+const target = document.getElementById('confetti-trigger');
+if (target) {
+    observer.observe(target);
+}
+
 
   var typed = new Typed(".auto-type", {
     strings: ["Web Development", "Software Development", "Cloud Computing"],
