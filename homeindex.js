@@ -43,6 +43,8 @@ function createObserver(containers, delay) {
 
 document.addEventListener("DOMContentLoaded", function() {
 
+
+
   const swiper = new Swiper('.swiper', {
   
     // If we need pagination
@@ -66,6 +68,29 @@ document.addEventListener("DOMContentLoaded", function() {
     duration: 1000, 
     once: true      
   });
+
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Trigger confetti only once
+            confetti({
+              particleCount:450,
+              spread: 300
+            });
+            observer.unobserve(entry.target); // Stop observing after triggering
+        }
+    });
+}, {
+    threshold: 0.5 // Adjust based on when you want the effect to trigger
+});
+
+// Start observing the target element
+const target = document.getElementById('confetti-trigger');
+if (target) {
+    observer.observe(target);
+}
+
 
   var typed = new Typed(".auto-type", {
     strings: ["Web Development", "Software Development", "Cloud Computing"],
