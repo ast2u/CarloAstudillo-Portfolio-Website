@@ -112,10 +112,6 @@ const containers2 = document.querySelectorAll('.timeline-container2');
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
-function isDesktopView(){
-  return window.innerWidth > 992;
-}
-
 
 function activateTimeline(timeline, screenRatio) {
   const timelinePosition = timeline.getBoundingClientRect().top;
@@ -129,10 +125,10 @@ function activateTimeline(timeline, screenRatio) {
 
 window.addEventListener("scroll",function(){
 
-  // Sticky function for navbar
+  if(window.innerWidth > 602){
       var header = document.querySelector("header");
       header.classList.toggle("sticky", window.scrollY>0)
-
+    }
       const timeline = document.querySelector('.timeline');
       const timeline2 = document.querySelector('.timeline2');
 
