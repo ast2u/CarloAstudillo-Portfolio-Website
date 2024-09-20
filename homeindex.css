@@ -1,4 +1,9 @@
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .font-bebasnav{
 font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -511,7 +516,7 @@ padding-bottom:100px ;
   letter-spacing: 7px;
   color:black;
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
 }
 
 .text-box{
@@ -640,7 +645,7 @@ padding-bottom:100px ;
 }
 .mycard-title{
   text-transform: uppercase;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 500;
 }
 .mycard-subtitle{
@@ -790,6 +795,7 @@ padding-bottom:100px ;
       display: block;
       border: 1px solid white;
       margin: 0.5rem 0; 
+      
     }
     .circle-for-pic{
       margin-top: 20px;
@@ -826,6 +832,9 @@ padding-bottom:100px ;
   }
 
   @media screen and (max-width:600px) {
+    .pictureport{
+      width: 300px;
+    }
     .headlineh1-Text{
 
       font-size:39px;
@@ -908,12 +917,43 @@ padding-bottom:100px ;
       left:-15px;
     }
     .swiper {
-      width: 100%; /* Make it full width on smaller screens */
+      width: 100%;
       background-color: grey ;
       max-width: 90%;
       height: 90%;
       margin: 0 auto;
     }
-  
+    /* credentials section */
+    .text-box{
+      padding: 10px 20px;
+      font-size: .9rem;
+    }
+    .text-box h2{
+      font-weight: 500;
+      font-size: 1.3rem;
+    }
+    .text-box ul{
+      font-size: 16.5px;
+    }
+
+    /* works section */
+    .mycard-title{
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    .mycard-subtitle{
+      text-transform: capitalize;
+      font-size: .8rem;
+      font-weight: 500;
+    }
+    .mycard-info{
+      font-size: .7rem;
+      line-height: 20px;
+      margin: 20px 0;
+      font-weight: 400;
+    }
+
+
 
   }
