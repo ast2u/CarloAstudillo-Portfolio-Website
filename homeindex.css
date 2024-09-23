@@ -66,10 +66,16 @@ header{
     transition: 0.6s;
     position: 40px 100px;
     z-index:100000 ;
+    background: rgba(255,255,255,.07);
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+
 }
 header.sticky{
     padding: 0px 35px;
-    background: #fff
+    background: #fff;
+    border:none;
 }
 header.sticky ul li a{
     color: black ;
@@ -826,6 +832,7 @@ padding-bottom:100px ;
         background:url(background/jack-b-ombUn7ergE4-unsplash.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        border:none;
         transition: .5s;
     }
     .custom-toggler .navbar-toggler-icon {
