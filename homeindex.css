@@ -66,10 +66,16 @@ header{
     transition: 0.6s;
     position: 40px 100px;
     z-index:100000 ;
+    background: rgba(255,255,255,.07);
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+
 }
 header.sticky{
     padding: 0px 35px;
-    background: #fff
+    background: #fff;
+    border:none;
 }
 header.sticky ul li a{
     color: black ;
@@ -362,14 +368,14 @@ a.button-cv button:active{
 /* awards section */
 .awards-section{
   background-color: #dddddd;
-  padding-top:100px;
-  padding-bottom: 30px;
+  padding-top:70px;
+  padding-bottom: 25px;
   font-family: "Rubik",sans-serif;
   
   }
   .swiper {
     width:100%;
-    height: 530px;
+    height: 450px;
     margin: 0 auto;
     border-radius: 15px;
   }
@@ -388,16 +394,16 @@ a.button-cv button:active{
     margin: 0 auto;
   }
   .card-awards h3{
-    font-size: 2.2rem;
+    font-size: 1.9rem;
     font-weight: 600;
   }
   .card-awards ul li{
     list-style: none;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .award-2 img{
     width: 100%;
-    height: 80%;
+    height: 450px;
     border-radius: 30px;
     background-color:#949494 ;
     object-fit: contain; /* Ensures the image maintains its aspect ratio */
@@ -674,6 +680,7 @@ padding-bottom:100px ;
 }
 .mycard-btn:active{
   transform: scale(.92);
+  background-color: #4f8837;
 }
 
 
@@ -791,6 +798,11 @@ padding-bottom:100px ;
     .mpHeadline{
         padding-top:120px
     }
+    .headlineh1-Text{
+
+      font-size:2.3rem;
+    
+    }
     .nav-item hr {
       display: block;
       border: 1px solid white;
@@ -820,6 +832,7 @@ padding-bottom:100px ;
         background:url(background/jack-b-ombUn7ergE4-unsplash.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        border:none;
         transition: .5s;
     }
     .custom-toggler .navbar-toggler-icon {
@@ -829,6 +842,17 @@ padding-bottom:100px ;
     .custom-toggler.navbar-toggler{
         border-color: #7ed956;
     }
+
+    .skills-row h5{
+
+      letter-spacing: 0;
+      line-height: 1;
+      font-size: 17px;
+    }
+    .skills-row ul li{
+        font-size: 1rem;
+        line-height: 1.5;
+    }
   }
 
   @media screen and (max-width:600px) {
@@ -837,7 +861,7 @@ padding-bottom:100px ;
     }
     .headlineh1-Text{
 
-      font-size:39px;
+      font-size:2.1rem;
       letter-spacing: 1px;
     
     }
@@ -863,6 +887,13 @@ padding-bottom:100px ;
     .about-info-p{
       font-size: .7rem;
       font-weight: 500;
+    }
+
+    .card-awards h3{
+      font-size: 1.5rem;
+    }
+    .card-awards ul li{
+      font-size: 1rem;
     }
 
     .skills-row h5{
