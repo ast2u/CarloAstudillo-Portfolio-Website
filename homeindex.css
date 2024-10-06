@@ -687,28 +687,18 @@ padding-bottom:100px ;
 /* contact section */
 .contact-section{
   overflow: hidden;
-  background-color: white;
-  padding-top: 80px;
+  background: rgb(221,221,221);
+  background: linear-gradient(180deg, rgba(221,221,221,1) 0%, rgba(255,255,255,1) 10%);
+  padding-top: 55px;
   width: 100%;
   position: relative;
 }
-.img-bg-footer{
-  background: url(background/annie-spratt-0aF_vV0xgQk-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: brightness(.4);
-  background-attachment: fixed;
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  top: 0;
-  left: 0;
+.contact-h2{
+  color:#7ed956;
+  text-shadow: 1px 1px black;
 
 }
+
 .box-socials-1{
   position: relative;
   background-color: rgb(124, 124, 124);
@@ -765,6 +755,23 @@ padding-bottom:100px ;
   
 }
 
+.img-bg-footer{
+  background: url(background/annie-spratt-0aF_vV0xgQk-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(.6);
+  background-attachment: fixed;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+}
 
 .footer-section{
   overflow: hidden;
