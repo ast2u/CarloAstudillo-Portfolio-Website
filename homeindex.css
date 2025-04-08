@@ -464,7 +464,7 @@ padding-bottom:100px ;
   opacity: 0;
 }
 .timeline2.active::after {
-  animation: moveline 3s linear forwards;
+  animation: moveline 6s linear forwards;
   opacity: 1;
 }
 
@@ -594,6 +594,10 @@ padding-bottom:100px ;
   border-right: 15px solid #dddddd;
   left: -15px;
   
+}
+
+.existLogo{
+  border: solid black 1px;
 }
 
 
