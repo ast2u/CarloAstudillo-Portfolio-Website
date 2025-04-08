@@ -93,7 +93,7 @@ if (target) {
 
 
   var typed = new Typed(".auto-type", {
-    strings: ["Web Development", "Software Development", "Cloud Computing"],
+    strings: ["Software Engineer", "Full-Stack Engineer", "Cloud Computing"],
     typeSpeed: 70,
     backSpeed: 40,
     loop: true
