@@ -21,6 +21,9 @@ hrcore/data/
 *.iml
 *.ipr
 .junie
+node_modules/
+dist/
+.angular/
 
 ### NetBeans ###
 /nbproject/private/
