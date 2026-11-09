@@ -1,0 +1,97 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "newProjectRoot": "projects",
+  "projects": {
+    "portfolio": {
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "background",
+                "output": "background"
+              },
+              {
+                "glob": "**/*",
+                "input": "file-assets",
+                "output": "file-assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "images",
+                "output": "images"
+              },
+              {
+                "glob": "**/*",
+                "input": "logopic",
+                "output": "logopic"
+              },
+              {
+                "glob": "**/*",
+                "input": "projects",
+                "output": "projects"
+              },
+              {
+                "glob": "homeindex.css",
+                "input": ".",
+                "output": "."
+              },
+              {
+                "glob": "projectinfo.html",
+                "input": ".",
+                "output": "."
+              },
+              {
+                "glob": "projectinfo.css",
+                "input": ".",
+                "output": "."
+              }
+            ],
+            "main": "src/main.ts",
+            "index": "src/index.html",
+            "outputPath": "dist/portfolio",
+            "polyfills": [
+              "zone.js"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [],
+            "tsConfig": "tsconfig.app.json"
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "portfolio:build:production"
+            },
+            "development": {
+              "buildTarget": "portfolio:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        }
+      },
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app"
+    }
+  },
+  "version": 1
+}
