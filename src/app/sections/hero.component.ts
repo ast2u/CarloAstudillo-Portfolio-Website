@@ -8,7 +8,9 @@ import { PROFILE } from '../data/portfolio.data';
     <div class="wrap hero" id="top">
       <div class="hero-grid">
         <div>
-          <h1>{{ p.headline }}</h1>
+          <h1 class="hero-headline">
+            <span class="auto-type"></span>
+          </h1>
           <p class="lead">{{ p.lead }}</p>
           <div class="btns">
             <a class="btn primary" href="#contact">Get in touch</a>
@@ -21,11 +23,19 @@ import { PROFILE } from '../data/portfolio.data';
             }
           </div>
         </div>
-        <div class="panel" aria-hidden="true">
-          <div class="bar"><span>kubectl get pods</span><span>namespace: prod</span></div>
-          @for (pod of pods; track pod.name) {
-            <div class="row"><span><i class="dot"></i>{{ pod.name }}</span><span>Running</span><span>{{ pod.ready }}</span></div>
-          }
+        <div class="portrait" [style.--portrait-bg]="'url(' + p.photoBg + ')'" ]>
+          <img [src]="p.photo" alt="Portrait of Carlo Astudillo" width="380" height="460">
+          <div class="panel" aria-hidden="true">
+            <div class="bar">
+                <span>kubectl get pods</span><span>prod</span>
+            </div>
+            @for (pod of pods; track pod.name) {
+              <div class="row"><span>
+              <i class="dot"></i>{{ pod.name }}
+              </span><span>Running</span><span>
+              {{ pod.ready }}</span></div>
+            }
+          </div>
         </div>
       </div>
     </div>

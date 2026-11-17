@@ -1,12 +1,16 @@
-export interface Job { when: string; title: string; org: string; bullets: string[]; }
+export interface Job { when: string; title: string; org: string; logo: string; bullets: string[]; }
 export interface Project { title: string; description: string; image: string; tags: string[]; link?: string; }
 export interface SkillGroup { title: string; items: string[]; }
-export interface Entry { title: string; detail: string; }
+export interface Awards { title: string; detail: string; images: string[];}
+export interface Entry { title: string; detail: string; image: string; }
 
 export const PROFILE = {
   name: 'Carlo John Astudillo',
+  shortNameLogo: 'logopic/CAlogo-removebg.png',
   shortName: ['Carlo', 'Astudillo'],
-  headline: 'I build and ship backend services.',
+  photo: 'images/PhotoPort.png',
+  photoBg: 'background/bgimage.jpg',
+  headline: 'I build and ship backend services',
   lead: 'Software engineer working with Java, Spring Boot, Kubernetes and Azure DevOps.',
   email: 'carloasto11@gmail.com',
   github: 'https://github.com/ast2u',
@@ -24,6 +28,7 @@ export const JOBS: Job[] = [
     when: 'Apr 2025 – Present',
     title: 'Software Engineer',
     org: 'Exist Software Labs, Inc. · Strategic Solutions – Energy',
+    logo: 'logopic/e-logo.png',
     bullets: [
       'Develop and enhance Java/Spring Boot microservices and backend applications across 4 projects, handling approximately 16–30 services.',
       'Create Python scripts and notebook-based jobs for data processing and automation.',
@@ -40,6 +45,7 @@ export const JOBS: Job[] = [
     when: 'Nov 2023 – Jun 2024',
     title: 'Content Services & DevOps Intern',
     org: 'GHD Group Philippines',
+    logo: 'logopic/Black-logo-ghd.jpg',
     bullets: [
         'Contributed to content service migration using GovStack and WordPress.',
         'Gained hands-on experience with DevOps and CI/CD using GitHub and Octopus Deploy.',
@@ -50,6 +56,7 @@ export const JOBS: Job[] = [
     when: 'Sep – Oct 2019',
     title: 'Internship Trainee, Finance',
     org: 'Coca-Cola Beverages Philippines',
+    logo: 'logopic/coca-cola-beverages-logo.png',
     bullets: [
         'Managed and organized documents and customer orders.',
         'Recorded and tracked orders using Microsoft Excel.',
@@ -109,12 +116,34 @@ export const SKILLS: SkillGroup[] = [
 ];
 
 export const EDUCATION: Entry[] = [
-  { title: 'BS Information Technology, Mobile & Internet Technology', detail: 'NU Philippines – Fairview, 2024' },
-  { title: 'Senior High School, ICT', detail: 'AMA Computer College, 2020' },
-  { title: 'Junior High School', detail: 'National College of Business and Arts, 2018' }
+  { title: 'BS Information Technology, Mobile & Internet Technology', 
+    detail: 'NU Philippines – Fairview, 2024',
+    image: 'logopic/nuf.png'
+  },
+  { title: 'Senior High School, ICT', 
+    detail: 'AMA Computer College, 2020',
+    image: 'logopic/amaes.png'
+  },
+  { title: 'Junior High School', 
+    detail: 'National College of Business and Arts, 2018',
+    image: 'logopic/ncbalogo.jpg'
+   }
 ];
 
-export const AWARDS: Entry[] = [
-  { title: 'Summa Cum Laude', detail: 'NU Philippines – Fairview' },
-  { title: 'Best Mobile Application', detail: 'IoT Symposium, NU Philippines – Fairview' }
+export const AWARDS: Awards[] = [
+  { title: 'Summa Cum Laude', 
+    detail: 'NU Philippines – Fairview',
+    images: [
+      'images/awards2.jpg',
+      'images/awards1.jpg',
+      'images/awards3.jpg'
+    ]
+  },
+  { title: 'Best Mobile Application', 
+    detail: 'IoT Symposium, NU Philippines – Fairview',
+    images: [
+      'images/awards4.jpg',
+      'images/iotsymposium.jpg',
+    ]
+  }
 ];

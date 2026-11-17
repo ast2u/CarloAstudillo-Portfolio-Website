@@ -8,7 +8,10 @@ import { PROFILE } from '../data/portfolio.data';
     <header>
       <div class="wrap">
         <nav>
-          <a class="logo" href="#top">{{ first }} <b>{{ last }}</b></a>
+          <a class="logo" href="#top">
+            <img [src]="logoBg" [alt]="first + last" class="logo-img">
+            <span>{{ first }} <b>{{ last }}</b></span>
+          </a>
           <div class="links">
             @for (link of links; track link.href) {
               <a [href]="link.href">{{ link.label }}</a>
@@ -21,6 +24,7 @@ import { PROFILE } from '../data/portfolio.data';
   `
 })
 export class HeaderComponent {
+  readonly logoBg = PROFILE.shortNameLogo;
   readonly first = PROFILE.shortName[0];
   readonly last = PROFILE.shortName[1];
   readonly links = [

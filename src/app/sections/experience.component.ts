@@ -13,7 +13,14 @@ import { JOBS } from '../data/portfolio.data';
             <div class="when">{{ job.when }}</div>
             <div>
               <h3>{{ job.title }}</h3>
-              <div class="org">{{ job.org }}</div>
+              <div class="org">
+                <img
+                  class="company-logo"
+                  [src]="job.logo"
+                  [alt]="job.org + ' logo'"
+                >
+                <span>{{ job.org }}</span>
+              </div>
               @if (job.bullets.length) {
                 <ul>
                   @for (b of job.bullets; track b) { <li>{{ b }}</li> }
