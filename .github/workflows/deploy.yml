@@ -35,6 +35,13 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist/portfolio
+      - name: Verify build output
+        run: |
+          echo "Checking Angular build output..."
+          test -f dist/portfolio/index.html
+          ls -lah dist/portfolio
+          echo "Checking base href..."
+          grep -o '<base href="[^"]*">' dist/portfolio/index.html
 
   deploy:
     environment:
