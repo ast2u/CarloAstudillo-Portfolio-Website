@@ -9,30 +9,59 @@ import { PROFILE } from '../data/portfolio.data';
     <header>
       <div class="wrap">
         <nav>
-          <a class="logo" href="#top">
+          <a class="logo" href="#top" (click)="closeMenu()">
             <img [src]="logoBg" [alt]="first + ' ' + last" class="logo-img">
             <span>{{ first }} <b>{{ last }}</b></span>
           </a>
 
-          <div class="links">
+          <div class="nav-actions">
+            <!-- Theme toggle stays outside the hamburger menu -->
+            <button
+              class="toggle theme-toggle"
+              type="button"
+              (click)="toggleTheme()"
+              [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+              [attr.title]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+            >
+              @if (isDarkMode) {
+                <!-- Sun icon -->
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2v2 M12 20v2 M4.93 4.93l1.42 1.42 M17.65 17.65l1.42 1.42 M2 12h2 M20 12h2 M4.93 19.07l1.42-1.42 M17.65 6.35l1.42-1.42"></path>
+                </svg>
+              } @else {
+                <!-- Moon icon -->
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z"></path>
+                </svg>
+              }
+            </button>
+
+            <!-- Hamburger button -->
+            <button
+              class="menu-toggle"
+              type="button"
+              (click)="toggleMenu()"
+              [attr.aria-expanded]="menuOpen"
+              aria-label="Toggle navigation menu"
+            >
+              <span [class.open]="menuOpen"></span>
+              <span [class.open]="menuOpen"></span>
+              <span [class.open]="menuOpen"></span>
+            </button>
+          </div>
+
+          <div class="links" [class.menu-open]="menuOpen">
             @for (link of links; track link.href) {
               <a
                 [href]="link.href"
                 [class.active]="activeSection === link.id"
                 [attr.aria-current]="activeSection === link.id ? 'location' : null"
+                (click)="closeMenu()"
               >
                 {{ link.label }}
               </a>
             }
-
-            <button
-              class="toggle"
-              type="button"
-              (click)="toggleTheme()"
-              aria-label="Toggle dark mode"
-            >
-              Theme
-            </button>
           </div>
         </nav>
       </div>
@@ -53,6 +82,8 @@ export class HeaderComponent implements AfterViewInit {
   ];
 
   activeSection = '';
+  menuOpen = false;
+  isDarkMode = false;
 
   ngAfterViewInit(): void {
     this.updateActiveSection();
@@ -66,6 +97,10 @@ export class HeaderComponent implements AfterViewInit {
   @HostListener('window:resize')
   onWindowResize(): void {
     this.updateActiveSection();
+
+    if (window.innerWidth > 720) {
+      this.closeMenu();
+    }
   }
 
   private updateActiveSection(): void {
@@ -77,14 +112,11 @@ export class HeaderComponent implements AfterViewInit {
 
       if (!section) continue;
 
-      const rect = section.getBoundingClientRect();
-
-      if (rect.top <= activationPoint) {
+      if (section.getBoundingClientRect().top <= activationPoint) {
         currentSection = link.id;
       }
     }
 
-    // Highlight Contact when the bottom of the page is reached.
     const atPageBottom =
       window.innerHeight + window.scrollY >=
       document.documentElement.scrollHeight - 5;
@@ -96,29 +128,34 @@ export class HeaderComponent implements AfterViewInit {
     this.activeSection = currentSection;
   }
 
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu(): void {
+    this.menuOpen = false;
+  }
+
   constructor() {
     try {
       const saved = localStorage.getItem('theme');
 
       if (saved) {
         document.documentElement.setAttribute('data-theme', saved);
+        this.isDarkMode = saved === 'dark';
+      } else {
+        this.isDarkMode = matchMedia('(prefers-color-scheme: dark)').matches;
       }
     } catch {
-      /* storage unavailable */
+      this.isDarkMode = false;
     }
   }
 
   toggleTheme(): void {
-    const root = document.documentElement;
-    const current = root.getAttribute('data-theme');
+    const next = this.isDarkMode ? 'light' : 'dark';
 
-    const isDark =
-      current === 'dark' ||
-      (!current && matchMedia('(prefers-color-scheme: dark)').matches);
-
-    const next = isDark ? 'light' : 'dark';
-
-    root.setAttribute('data-theme', next);
+    document.documentElement.setAttribute('data-theme', next);
+    this.isDarkMode = next === 'dark';
 
     try {
       localStorage.setItem('theme', next);
