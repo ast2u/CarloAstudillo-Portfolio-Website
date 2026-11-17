@@ -24,7 +24,6 @@ hrcore/data/
 node_modules/
 dist/
 .angular/
-/portfolio-obsidian
 
 ### NetBeans ###
 /nbproject/private/
@@ -38,3 +37,4 @@ build/
 
 ### VS Code ###
 .vscode/
+portfolio-obsidian/
