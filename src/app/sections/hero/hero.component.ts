@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { PROFILE } from '../data/portfolio.data';
+import { PROFILE } from '../../data/portfolio.data';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
+  styleUrl: 'hero.component.css',
   template: `
     <div class="wrap hero" id="top">
       <div class="hero-grid">

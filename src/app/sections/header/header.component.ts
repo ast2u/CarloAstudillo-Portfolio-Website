@@ -1,10 +1,11 @@
 
 import { AfterViewInit, Component, HostListener } from '@angular/core';
-import { PROFILE } from '../data/portfolio.data';
+import { PROFILE } from '../../data/portfolio.data';
 
 @Component({
   selector: 'app-header',
   standalone: true,
+  styleUrl: 'header.component.css',
   template: `
     <header>
       <div class="wrap">

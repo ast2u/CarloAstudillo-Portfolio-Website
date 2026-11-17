@@ -1,6 +1,6 @@
 
 import { AfterViewInit, Component, OnDestroy } from '@angular/core';
-import { AWARDS, EDUCATION } from '../data/portfolio.data';
+import { AWARDS, EDUCATION } from '../../data/portfolio.data';
 
 declare const Swiper: new (
   element: Element,
@@ -10,6 +10,7 @@ declare const Swiper: new (
 @Component({
   selector: 'app-education',
   standalone: true,
+  styleUrl: 'education.component.css',
   template: `
     <section id="education">
       <div class="wrap education-wrap">

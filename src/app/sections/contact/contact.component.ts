@@ -1,10 +1,11 @@
 
 import { Component } from '@angular/core';
-import { PROFILE } from '../data/portfolio.data';
+import { PROFILE } from '../../data/portfolio.data';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
+  styleUrl: 'contact.component.css',
   template: `
     <section id="contact" class="contact">
       <div class="wrap">

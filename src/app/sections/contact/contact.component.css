@@ -1,0 +1,2 @@
+.contact p { max-width: 46ch; color: var(--muted); }
+.social { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px; }

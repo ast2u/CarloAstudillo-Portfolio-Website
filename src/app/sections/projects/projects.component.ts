@@ -1,10 +1,11 @@
 
 import { Component } from '@angular/core';
-import { PROJECTS } from '../data/portfolio.data';
+import { PROJECTS } from '../../data/portfolio.data';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
+  styleUrl: 'projects.component.css',
   template: `
     <section id="projects">
       <div class="wrap">
