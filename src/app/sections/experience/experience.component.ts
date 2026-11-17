@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { JOBS } from '../data/portfolio.data';
+import { JOBS } from '../../data/portfolio.data';
 
 @Component({
   selector: 'app-experience',
   standalone: true,
+  styleUrl: 'experience.component.css',
   template: `
     <section id="experience">
       <div class="wrap">

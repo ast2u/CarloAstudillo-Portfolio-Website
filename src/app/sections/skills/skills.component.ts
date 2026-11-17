@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { SKILLS } from '../data/portfolio.data';
+import { SKILLS } from '../../data/portfolio.data';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
+  styleUrl: 'skills.component.css',
   template: `
     <section id="skills">
       <div class="wrap">

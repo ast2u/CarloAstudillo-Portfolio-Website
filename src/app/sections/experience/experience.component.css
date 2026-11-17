@@ -1,0 +1,11 @@
+.job { display: grid; grid-template-columns: 170px 1fr; gap: 12px 32px; padding: 26px 0; border-top: 1px solid var(--line); }
+.job:first-of-type { border-top: 0; padding-top: 0; }
+.when { color: var(--muted); font-size: 0.95rem; }
+.job h3 { font-size: 1.35rem; }
+.org { display: flex; align-items: center; gap: 8px; color: var(--accent); font-weight: 600; margin: 2px 0 10px; }
+.company-logo { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
+.job ul { margin: 0; padding-left: 1.1rem; max-width: 64ch; }
+.job li { margin-bottom: 6px; }
+.job li::marker { color: var(--accent); }
+
+@media (max-width: 700px) { .job { grid-template-columns: 1fr; } }

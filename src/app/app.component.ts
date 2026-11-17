@@ -1,12 +1,12 @@
 import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { PROFILE } from './data/portfolio.data';
-import { HeaderComponent } from './sections/header.component';
-import { HeroComponent } from './sections/hero.component';
-import { ExperienceComponent } from './sections/experience.component';
-import { ProjectsComponent } from './sections/projects.component';
-import { SkillsComponent } from './sections/skills.component';
-import { EducationComponent } from './sections/education.component';
-import { ContactComponent } from './sections/contact.component';
+import { HeaderComponent } from './sections/header/header.component';
+import { HeroComponent } from './sections/hero/hero.component';
+import { ExperienceComponent } from './sections/experience/experience.component';
+import { ProjectsComponent } from './sections/projects/projects.component';
+import { SkillsComponent } from './sections/skills/skills.component';
+import { EducationComponent } from './sections/education/education.component';
+import { ContactComponent } from './sections/contact/contact.component';
 
 declare const Typed: new (
   selector: string,
@@ -21,6 +21,7 @@ declare const Typed: new (
 @Component({
   selector: 'app-root',
   standalone: true,
+  styleUrl: 'app.component.css',
   imports: [
     HeaderComponent,
     HeroComponent,

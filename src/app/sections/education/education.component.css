@@ -1,0 +1,255 @@
+/* ========================================
+   EDUCATION & AWARDS
+\======================================== */
+
+#education .education-wrap {
+  max-width: 1120px;
+}
+
+/* Section heading */
+#education .education-heading {
+  margin-bottom: 42px;
+}
+
+#education .section-eyebrow {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+}
+
+#education .education-heading h2 {
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  margin-bottom: 12px;
+}
+
+#education .education-heading h2 span {
+  color: var(--accent);
+}
+
+#education .education-heading p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Subsection headings */
+#education .subsection-title {
+  font-size: 1.35rem;
+  margin-bottom: 20px;
+}
+
+/* Education cards */
+#education .education-list {
+  margin-bottom: 52px;
+}
+
+#education .education-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+#education .education-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  min-width: 0;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+#education .education-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+#education .education-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+#education .education-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+#education .education-content {
+  min-width: 0;
+}
+
+#education .education-content b {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 7px;
+}
+
+#education .education-content span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Awards */
+#education .awards-section {
+  width: 100%;
+}
+
+#education .awards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+#education .award-card {
+  min-width: 0;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+#education .award-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+#education .award-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+#education .award-label {
+  display: block;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 7px;
+}
+
+#education .award-info h4 {
+  color: var(--ink);
+  font-size: 1.1rem;
+  margin: 0 0 6px;
+}
+
+#education .award-info p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+#education .award-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+/* Certificate carousel */
+#education .award-swiper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 0;
+  padding: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+
+#education .award-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#education .award-swiper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+#education .award-swiper .swiper-button-next,
+#education .award-swiper .swiper-button-prev {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--accent);
+  border: 1px solid var(--line);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+#education .award-swiper .swiper-button-next::after,
+#education .award-swiper .swiper-button-prev::after {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  #education .education-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #education .awards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  #education .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #education .education-card,
+  #education .award-card {
+    padding: 18px;
+  }
+
+  #education .award-swiper {
+    height: 240px;
+  }
+
+  #education .education-heading {
+    margin-bottom: 32px;
+  }
+}
