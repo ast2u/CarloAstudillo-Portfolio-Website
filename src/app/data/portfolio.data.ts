@@ -15,6 +15,7 @@ export const PROFILE = {
   email: 'carloasto11@gmail.com',
   github: 'https://github.com/ast2u',
   linkedin: 'https://www.linkedin.com/in/carlo-john-astudillo-34b75b1b7/',
+  jobstreet: 'https://ph.jobstreet.com/profiles/carlojohn-astudillo-rqbCNWzBz2',
   cv: 'file-assets/CV_ASTUDILLO-2026-oct152026.pdf',
   facts: [
     { label: 'Exist Software Labs', value: 'Software Engineer, since 2025' },

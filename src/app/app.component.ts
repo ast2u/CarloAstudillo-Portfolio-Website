@@ -24,8 +24,8 @@ declare const Typed: new (
   imports: [
     HeaderComponent,
     HeroComponent,
-    SkillsComponent,
     ExperienceComponent,
+    SkillsComponent,
     ProjectsComponent,
     EducationComponent,
     ContactComponent
@@ -34,14 +34,14 @@ declare const Typed: new (
     <app-header />
     <main>
       <app-hero />
-      <app-skills />
       <app-experience />
+      <app-skills />
       <app-projects />
       <app-education />
       <app-contact />
     </main>
     <footer>
-      <div class="wrap">© {{ year }} {{ name }}</div>
+      <div class="wrap">Copyright ©{{ year }} All rights reserved ⸻ {{ name }}</div>
     </footer>
   `
 })

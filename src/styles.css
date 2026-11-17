@@ -109,15 +109,70 @@ nav { display: flex; align-items: center; justify-content: space-between; height
 .toggle { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 6px 14px; font: inherit; font-size: .9rem; cursor: pointer; }
 @media (max-width: 720px) { .links a { display: none; } }
 
+/* Active navigation section */
+.links a {
+  position: relative;
+  transition:
+    color .2s ease,
+    background .2s ease;
+  padding: 7px 10px;
+  border-radius: 8px;
+}
+
+/* Hover state */
+.links a:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* Active section */
+.links a.active {
+  color: var(--accent);
+  background: var(--accent-soft);
+  font-weight: 700;
+}
+
+/* Small indicator underneath active link */
+.links a.active::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  animation: nav-indicator .2s ease;
+}
+
+@keyframes nav-indicator {
+  from {
+    transform: scaleX(.3);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .links a,
+  .links a.active::after {
+    animation: none;
+    transition: none;
+  }
+}
+
+
 /* hero */
 .hero { padding: 72px 24px 56px; }
 .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
 .hero-headline {
   display: block;
-  min-height: 2em;
+  min-height: 3em;
   line-height: 1;
   margin: 0 0 20px;
-  font-size: 4.2rem !important;
 }
 
 .hero-headline .auto-type {
@@ -203,6 +258,57 @@ section > .wrap > h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: 34p
 .tag { background: var(--accent-soft); color: var(--ink); border-radius: 999px; padding: 3px 11px; font-size: .82rem; font-weight: 500; }
 .card a.more { font-weight: 600; color: var(--accent); text-decoration: none; }
 .card a.more:hover { text-decoration: underline; }
+
+/* Projects card interactions */
+#projects .project-card {
+  position: relative;
+  cursor: default;
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease;
+}
+
+/* Hover effect applies to ALL project cards */
+#projects .project-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--accent);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, .16);
+}
+
+/* Image zoom */
+#projects .project-card img {
+  transition: transform .4s ease;
+}
+
+#projects .project-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Only cards with links get clickable behavior */
+#projects .project-card:has(.project-card-link) {
+  cursor: pointer;
+}
+
+#projects .project-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+}
+
+/* Keyboard accessibility */
+#projects .project-card-link:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #projects .project-card,
+  #projects .project-card img {
+    transition: none;
+  }
+}
 
 .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 28px; }
 .skills h3 { font-size: 1.05rem; margin-bottom: 12px; }

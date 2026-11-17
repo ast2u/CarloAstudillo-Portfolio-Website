@@ -44,9 +44,9 @@ import { PROFILE } from '../data/portfolio.data';
 export class HeroComponent {
   readonly p = PROFILE;
   readonly pods = [
-    { name: 'orders-service', ready: '2/2' },
     { name: 'billing-service', ready: '2/2' },
-    { name: 'auth-service', ready: '3/3' },
+    { name: 'trading-service', ready: '2/2' },
+    { name: 'customer-service', ready: '2/2' },
     { name: 'data-sync-job', ready: '1/1' }
   ];
 }
