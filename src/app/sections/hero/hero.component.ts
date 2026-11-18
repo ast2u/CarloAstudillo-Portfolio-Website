@@ -24,7 +24,7 @@ import { PROFILE } from '../../data/portfolio.data';
             }
           </div>
         </div>
-        <div class="portrait" [style.--portrait-bg]="'url(' + p.photoBg + ')'" ]>
+        <div class="portrait" [style.--portrait-bg]="'url(' + p.photoBg + ')'">
           <img [src]="p.photo" alt="Portrait of Carlo Astudillo" width="380" height="460">
           <div class="panel" aria-hidden="true">
             <div class="bar">
