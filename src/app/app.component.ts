@@ -64,7 +64,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   private initializeTyping(): void {
     this.typedInstance = new Typed('.auto-type', {
       strings: [this.headline],
-      typeSpeed: 35,
+      typeSpeed: 54,
       backSpeed: 40,
       loop: false
     });
