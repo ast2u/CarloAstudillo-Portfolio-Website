@@ -32,12 +32,13 @@ export const JOBS: Job[] = [
     logo: 'logopic/e-logo.png',
     bullets: [
       'Develop and enhance Java/Spring Boot microservices and backend applications across 4 projects, handling approximately 16–30 services.',
-      'Create Python scripts and notebook-based jobs for data processing and automation.',
+      'Developed 5+ Python automation scripts and notebook-based jobs for data processing and operational tasks.',
       'Build and maintain CI/CD pipelines in Azure DevOps, with images stored in Azure Container Registry.',
+      'Worked with 4 Kubernetes clusters, supporting Dev, UAT, and Production environments.',
+      'Configured Kubernetes resources, including Ingress, Pods, and Deployments.',
       'Investigate production issues through log analysis, troubleshooting, and root cause identification.',
-      'Manage Kubernetes resources and deployments in on-premises environments.',
       'Perform database operations, including data transfers between environments, SQL views, and functions.',
-      'Deliver feature enhancements and bug fixes while providing development support across multiple projects.',
+      'Deliver 50+ enhancements and bug fixes while providing development support across multiple projects.',
       'Coordinate with clients and internal teams to investigate issues and implement practical solutions.',
       'Support application deployments, maintenance, and reliability across development and production environments.'
     ]
